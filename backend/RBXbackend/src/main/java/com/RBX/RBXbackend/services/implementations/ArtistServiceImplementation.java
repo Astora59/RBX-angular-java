@@ -24,4 +24,12 @@ public class ArtistServiceImplementation implements ArtistService {
         artistRepository.findAll().forEach(liste::add);
         return liste;
     }
+
+    @Override
+    public Artist postArtist(Artist artist) {
+        artist.setArtist_status("attente");
+        return artistRepository.save(artist);
+    }
+
+
 }

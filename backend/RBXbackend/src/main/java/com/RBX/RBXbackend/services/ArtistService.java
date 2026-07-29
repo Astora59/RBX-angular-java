@@ -7,4 +7,6 @@ import java.util.List;
 public interface ArtistService {
 
     List<Artist> findAll();
+
+    Artist postArtist(Artist artist);
 }
